@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Electronics & Robotics Club of Adamjee</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<!-- preloader start -->
+	<div class="preloader">
+		<div class="box">
+			<div></div><div></div><div></div>
+		</div>
+	</div>
+	<!-- preloader end -->
+	<div class="banner">
+		<div class="left-box">
+		<div class="wrapper">
+			<img src="img\logo.png" class="logo" alt="logo">
+
+			<div class="search-box">
+				<img src="img\search.png" alt="search">
+				<input type="text" placeholder="Search">
+			</div>
+
+			<div class="vertical-line"></div>
+
+			<ul>
+				<li><a href="#">PRODUCTION</a></li>
+				<li><a href="#">FACILITY</a></li>
+				<li><a href="#">MECHANISM</a></li>
+				<li><a href="#">OUR TEAM</a></li>
+				<li><a href="#">OUR IDEAS</a></li>
+			</ul>
+
+		</div>
+		</div>
+		<div class="right-box">
+			<nav>
+				<ul>
+					<li><a href="#">HOME</a></li>
+					<li><a href="#">EVENT</a></li>
+					<li><a href="#">PROJECTS</a></li>
+					<li><a href="#">TEAM DETAILS</a></li>
+					<li><a href="#">CONTACT US</a></li>
+				</ul>
+			</nav>
+
+			<h2>A NEW<br>ERA BEGINS</h2>
+
+			<div class="robot">
+				<img src="img\robo.png" alt="robot">
+				<h1>ROBOTICS</h1>
+				<div class="features">
+					<div>
+						<small>WATCH PREVIEW</small>
+						<img src="img\play.png" alt="play">
+					</div>
+					<div>
+						<small>THE MAKING</small>
+						<img src="img\settings.png" alt="settings">
+					</div>
+					<div>
+						<small>DOWNLOAD PDF</small>
+						<img src="img\download.png" alt="download">
+					</div>
+				</div>
+			</div>
+
+		<!-- <div class="sec-2"></div>
+		<div class="sec-3"></div>
+		<div class="sec-4"></div> -->
+
+			<!-- For Scroll bot -->
+    <div id="scroll-bot">
+        <img src="img\scroll-bot.png" alt="">
+    </div>
+    <div class="ender"></div>
+
+
+				<div class="circle"></div>
+
+				<div class="pagination">
+					<ul>
+						<li class="active"><a href="#">01</a></li>
+						<li><a href="#">02</a></li>
+						<li><a href="#">03</a></li>
+						<li><a href="#">04</a></li>
+						<li><a href="#">05</a></li>
+					</ul>
+				</div>
+				<img src="img\volume.png" alt="" class="volume">
+		</div>
+	</div>
+
+	<div class="smallCursour"></div>
+	<div class="largeCursour"></div>
+
+	<script>
+
+		var smallCursour = document.querySelector(".smallCursour");
+		var largeCursour = document.querySelector(".largeCursour");
+
+		document.onmousemove = function(e){
+			smallCursour.style.left = (e.pageX - 5) + "px";
+			smallCursour.style.top = (e.pageY - 5) + "px";
+
+			smallCursour.style.display = "block";
+
+			largeCursour.style.left = (e.pageX - 22) + "px";
+			largeCursour.style.top = (e.pageY - 22) + "px";
+
+			largeCursour.style.display = "block";
+		}
+
+	</script>
+<!-- main js -->
+  <script src="js/main.js"></script>
+  <script src="js/scroll-bar.js"></script>
+</body>
+</html>

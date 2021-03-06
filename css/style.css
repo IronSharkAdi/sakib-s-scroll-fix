@@ -1,0 +1,303 @@
+:root {
+  --bg-black-50: #eff0f4;
+  --skin-color: #3fc9f5;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: #000;
+  color: #fff;
+  font-family: sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+/*--------------
+preloader
+----------------*/
+.preloader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1500;
+  background-color: var(--bg-black-50);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.preloader.fade-out {
+  opacity: 0;
+  transition: all 0.6s ease;
+}
+.preloader .box {
+  width: 65px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.preloader .box div {
+  height: 15px;
+  width: 15px;
+  background-color: var(--skin-color);
+  border-radius: 50%;
+  animation: loaderAni 1s ease infinite;
+}
+.preloader .box div:nth-child(2) {
+  animation-delay: 0.1s;
+}
+.preloader .box div:nth-child(3) {
+  animation-delay: 0.2s;
+}
+@keyframes loaderAni {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-30px);
+  }
+}
+.banner {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+}
+.left-box {
+  flex-basis: 20%;
+  background: #002e52;
+}
+.right-box {
+  flex-basis: 80%;
+  position: relative;
+}
+.logo {
+  width: 150px;
+  margin: 60px 0;
+}
+.wrapper {
+  width: 80%;
+  margin: auto;
+}
+.search-box {
+  display: flex;
+  background: #fff;
+  padding: 10px 7px;
+  border-radius: 20px;
+}
+.search-box img {
+  width: 18px;
+  margin: auto 5px;
+}
+.search-box input {
+  width: 80%;
+  border: 0;
+  outline: none;
+  background: transparent;
+  z-index: 2;
+  cursor: none;
+}
+.vertical-line {
+  width: 1px;
+  height: 40vh;
+  background: #797979;
+  margin: 30px 0 10px;
+}
+.wrapper ul li {
+  list-style: none;
+  margin: 10px 0;
+}
+.wrapper ul li a {
+  color: #797979;
+  font-size: 13px;
+  text-decoration: none;
+}
+nav {
+  margin-top: 60px;
+  margin-left: 60px;
+}
+nav ul {
+  display: flex;
+}
+nav ul li {
+  list-style: none;
+  margin-right: 70px;
+}
+nav ul li a {
+  color: #fff;
+  font-size: 13px;
+  text-decoration: none;
+}
+/*.sec-2{
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	z-index: 1500;
+	background-color: var(--bg-black-50);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}*/
+.right-box h2 {
+  margin-top: 5%;
+  margin-left: 60px;
+  font-size: 60px;
+  letter-spacing: 3px;
+}
+.robot {
+  position: absolute;
+  bottom: 0;
+  right: 6%;
+  height: 93%;
+}
+.robot img {
+  height: 100%;
+}
+.robot h1 {
+  position: absolute;
+  top: 100px;
+  right: -30px;
+  font-size: 130px;
+  color: #e2e2e2;
+  opacity: 0.1;
+  z-index: -1;
+}
+.features {
+  position: absolute;
+  bottom: 17%;
+  left: -220px;
+}
+.features img {
+  width: 50px;
+  margin-left: 40px;
+}
+.features div {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.features div:nth-child(2) {
+  margin-left: 35px;
+}
+.features div:nth-child(3) {
+  margin-left: 38px;
+}
+.circle {
+  width: 180px;
+  height: 180px;
+  border: 40px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  position: absolute;
+  top: 38%;
+  left: -130px;
+}
+.pagination ul {
+  display: flex;
+  align-items: flex-end;
+}
+.pagination ul li {
+  list-style: none;
+  margin-right: 20px;
+}
+.pagination ul li a {
+  text-decoration: none;
+  color: #ccc;
+  font-size: 12px;
+  padding: 10px;
+  border-bottom: 2px solid #fff;
+}
+.pagination {
+  position: absolute;
+  left: 60px;
+  bottom: 5%;
+}
+.pagination ul li.active a {
+  font-size: 22px;
+  border-bottom: 5px solid #fff;
+}
+.volume {
+  width: 25px;
+  position: absolute;
+  right: 4%;
+  bottom: 4%;
+}
+.smallCursour {
+  height: 10px;
+  width: 10px;
+  background: #3fc9f5;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 1;
+  display: none;
+}
+.largeCursour {
+  height: 40px;
+  width: 40px;
+  border: 2px solid #3fc9f5;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 1;
+  display: none;
+  transition-duration: 500ms;
+  transition-timing-function: ease-out;
+}
+a {
+  position: relative;
+  z-index: 2;
+}
+
+/* --------------------------------Scroll-bar---------------------------------------- */
+
+body {
+  overflow: overlay;
+  height: 200vh; /* remove this line after adding new page at bottom and then the scroll-bar will start from begining */
+}
+
+#scroll-bot {
+  position: fixed;
+  top: 0px;
+  right: 0;
+  z-index: 100001;
+  height: 110%;
+  width: 25px;
+  display: none;
+  background: #1a1b1d;
+  border-left: 3px #fff solid;
+  border-right: 4px #fff dashed;
+}
+html {
+  scrollbar-width: none;
+}
+
+::-webkit-scrollbar {
+  width: 30px;
+  background: transparent;
+  /* overflow: overlay; */
+}
+
+::-webkit-scrollbar-thumb {
+  background-image: url("../img/scroll-bot.png");
+  background-position: center;
+  background-position-x: 10px;
+  min-height: 7vw;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1b1d;
+  border-left: 4px solid #fff;
+  border-right: 6px dashed #fff;
+  /*nothing else works - outline, svg as background image*/
+}
+
+@media screen and (max-width: 768px) {
+  ::-webkit-scrollbar {
+    display: none;
+  }
+}
+/* --------------------------------Scroll-bar-end---------------------------------------- */
